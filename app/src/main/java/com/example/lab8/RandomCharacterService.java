@@ -1,4 +1,4 @@
-package com.example.myserviceapp;
+package com.example.lab8;
 
 import android.app.Service;
 import android.content.Intent;

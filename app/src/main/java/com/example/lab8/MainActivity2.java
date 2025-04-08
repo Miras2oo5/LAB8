@@ -1,4 +1,4 @@
-package com.example.myserviceapp;
+package com.example.lab8;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;

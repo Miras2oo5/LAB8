@@ -1,4 +1,4 @@
-package com.example.myserviceapp;
+package com.example.lab8;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.BroadcastReceiver;
@@ -25,16 +25,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.button_start:
-                startService(serviceIntent);
-                break;
-            case R.id.button_end:
-                stopService(serviceIntent);
-                randomCharacterEditText.setText("");
-                break;
+        int id = view.getId();
+        if (id == R.id.button_start) {
+            startService(serviceIntent);
+        } else if (id == R.id.button_end) {
+            stopService(serviceIntent);
+            randomCharacterEditText.setText("");
         }
     }
+
 
     public void nextActivity(View view) {
         startActivity(new Intent(this, MainActivity2.class));

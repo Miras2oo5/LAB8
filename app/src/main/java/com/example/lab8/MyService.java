@@ -1,4 +1,4 @@
-package com.example.myserviceapp;
+package com.example.lab8;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -30,10 +30,11 @@ public class MyService extends Service {
         createNotificationChannel();
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.ic_media_play) // стандартная иконка
                 .setContentTitle("My Music Player")
                 .setContentText("Music is playing")
-                .setSmallIcon(R.drawable.ic_music) // Добавь иконку в drawable
                 .build();
+
 
         startForeground(1, notification);
         mediaPlayer.start();
